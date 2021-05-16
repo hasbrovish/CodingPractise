@@ -65,33 +65,8 @@ public:
        int p1=nums.size()-k;
        int p2=k;
         
-       for(int i=0,j=p1-1;i<p1/2;i++,j--)
-       {
-           int temp=nums[i];
-           nums[i]=nums[j];
-           nums[j]=temp;
-       }
-       
-        for(int i:nums)
-            cout<<i<<" ";
-         for(int i=p1,j=nums.size()-1;i<j;i++,j--)
-       {
-           int temp=nums[i];
-           nums[i]=nums[j];
-           nums[j]=temp;
-       }
-        cout<<endl;
-        for(int i:nums)
-            cout<<i<<" ";
-        
-       for(int i=0,j=nums.size()-1;i<nums.size()/2;i++,j--)
-       {
-
-            int temp=nums[i];
-           nums[i]=nums[j];
-           nums[j]=temp;
-
-       }
-        
+      reverse(nums.begin(),nums.begin()+nums.size()-k);                                    
+      reverse(nums.begin()+nums.size()-k,nums.end());
+      reverse(nums.begin(),nums.end());
     }
     };
