@@ -52,3 +52,5 @@ cout<<primeR.size();
 	return 0;
 	
 }
+//Got run time error as for linr 30 getting k , for L,R > 10^9 , bcoze k was intialised as int , but it should be long long int , as k could go beyond int 
+//limits
